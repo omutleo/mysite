@@ -14,4 +14,23 @@ navLinks.forEach((link, index) => {
     });
   });
 });
+const backToTopButtons = document.querySelectorAll('.back-to-top');
 
+window.addEventListener('scroll', () => {
+  backToTopButtons.forEach((button) => {
+    if (window.pageYOffset > 100) {
+      button.classList.add('show');
+    } else {
+      button.classList.remove('show');
+    }
+  });
+});
+
+backToTopButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+});
