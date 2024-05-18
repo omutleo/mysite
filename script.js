@@ -4,6 +4,7 @@ const sections = document.querySelectorAll('.section');
 navLinks.forEach((link, index) => {
   link.addEventListener('click', (event) => {
     event.preventDefault();
+    event.stopPropagation(); // Остановка дефолтного поведения ссылки
     sections.forEach((section) => {
       section.style.animation = 'none'; // Останавливаем текущую анимацию
       section.offsetHeight; // Триггер перерисовки
@@ -11,7 +12,7 @@ navLinks.forEach((link, index) => {
     });
     const targetSection = sections[index];
     targetSection.scrollIntoView({ behavior: 'smooth' });
-    return false; 
-    
+    return false; // Остановка дефолтного поведения ссылки
   });
 });
+window.location.reload(true);
