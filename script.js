@@ -11,5 +11,7 @@ navLinks.forEach((link, index) => {
     });
     const targetSection = sections[index];
     targetSection.scrollIntoView({ behavior: 'smooth' });
+    return false; 
+    window.location.reload(true);
   });
 });
