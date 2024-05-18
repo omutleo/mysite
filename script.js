@@ -15,4 +15,4 @@ navLinks.forEach((link, index) => {
     return false; // Остановка дефолтного поведения ссылки
   });
 });
-window.location.reload(true);
+
