@@ -101,14 +101,14 @@ header nav a:active:before {
 }
 
 /* Услуги */
-.service {
+.services {
   margin-bottom: 30px;
 }
-#service {
+#services {
   text-align: center; /* Центрирование всего блока */
 }
 
-#service img {
+#services img {
   display: block; /* Расположение картинки по центру */
   margin: 0 auto; /* Центрирование картинки */
   max-width: 100%;
@@ -116,7 +116,7 @@ header nav a:active:before {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-#service p {
+#services p {
   text-align: center; /* Центрирование текста */
   font-style: italic;
   font-size: 1.2em;
