@@ -6,11 +6,8 @@ navLinks.forEach((link, index) => {
     event.preventDefault();
     event.stopPropagation();
     const targetSection = sections[index];
-    document.body.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-      inline: 'nearest',
-      target: targetSection
-    });
+    $('html, body').animate({
+      scrollTop: $(targetSection).offset().top
+    }, 1300); // отрегулируйте длительность анимации по необходимости
   });
 });
