@@ -1,0 +1,57 @@
+/* Общие стили */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Шапка */
+header {
+  background-color: #0077b6;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+/* Секции */
+.section {
+  padding: 50px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.section h2 {
+  text-align: center;
+}
+
+/* О нас */
+#about img {
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#about p {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Услуги */
+.service {
+  margin-bottom: 30px;
+}
+
+/* Обратная связь */
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
