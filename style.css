@@ -104,7 +104,27 @@ header nav a:active:before {
 .service {
   margin-bottom: 30px;
 }
+#service {
+  text-align: center; /* Центрирование всего блока */
+}
 
+#service img {
+  display: block; /* Расположение картинки по центру */
+  margin: 0 auto; /* Центрирование картинки */
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#service p {
+  text-align: center; /* Центрирование текста */
+  font-style: italic;
+  font-size: 1.2em;
+  width: 70%;
+  max-width: 70%;
+  margin: 0 auto; /* Центрирование текста */
+  margin-top: 20px;
+}
 /* Обратная связь */
 .contact-form {
   max-width: 500px;
