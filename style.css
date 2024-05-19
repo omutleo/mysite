@@ -129,6 +129,7 @@ header nav a:active:before {
 .contact-form {
   max-width: 500px;
   margin: 0 auto;
+  text-align: center;
 }
 .back-to-top {
   position: fixed;
