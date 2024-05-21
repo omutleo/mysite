@@ -1,4 +1,4 @@
-/* Общие стили */
+ /* Общие стили */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -18,7 +18,7 @@ header h1 {
 }
 
 header nav {
-  margin-top: 20px; /* Увеличенный отступ сверху для ссылок */
+  margin-top: 20px;
 }
 
 header nav a {
@@ -30,7 +30,7 @@ header nav a {
   border-radius: 5px;
   position: relative;
   overflow: hidden;
-  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 header nav a:before {
@@ -47,8 +47,8 @@ header nav a:before {
 
 header nav a:hover,
 header nav a:active {
-  background-color: rgba(255, 255, 255, 0.5);
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 header nav a:hover:before,
@@ -57,19 +57,19 @@ header nav a:active:before {
 }
 
 .section {
-  padding: 50px;
+  padding: 50px 20px;
   border: 1px solid #ccc;
   margin-bottom: 20px;
-  opacity: 0; /* Начальная прозрачность */
-  animation: fade-in 2s ease-in-out forwards; /* Определение анимации */
+  opacity: 0;
+  animation: fade-in 2s ease-in-out forwards;
 }
 
 @keyframes fade-in {
   0% {
-    opacity: 0; /* Начальная прозрачность */
+    opacity: 0;
   }
   100% {
-    opacity: 1; /* Конечная прозрачность */
+    opacity: 1;
   }
 }
 
@@ -79,58 +79,61 @@ header nav a:active:before {
 
 /* О нас */
 #about {
-  text-align: center; /* Центрирование всего блока */
+  text-align: center;
 }
 
 #about img {
-  display: block; /* Расположение картинки по центру */
-  margin: 0 auto; /* Центрирование картинки */
+  display: block;
+  margin: 0 auto;
   max-width: 100%;
   height: auto;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 #about p {
-  text-align: center; /* Центрирование текста */
+  text-align: center;
   font-style: italic;
   font-size: 1.2em;
   width: 70%;
   max-width: 70%;
-  margin: 0 auto; /* Центрирование текста */
-  margin-top: 20px;
+  margin: 20px auto 0;
 }
 
 /* Услуги */
 .services {
   margin-bottom: 30px;
 }
+
 #services {
-  text-align: center; /* Центрирование всего блока */
+  text-align: center;
 }
 
 #services img {
-  display: block; /* Расположение картинки по центру */
-  margin: 0 auto; /* Центрирование картинки */
+  display: block;
+  margin: 0 auto;
   max-width: 100%;
   height: auto;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 #services p {
-  text-align: center; /* Центрирование текста */
+  text-align: center;
   font-style: italic;
   font-size: 1.2em;
   width: 70%;
   max-width: 70%;
-  margin: 0 auto; /* Центрирование текста */
-  margin-top: 20px;
+  margin: 20px auto 0;
 }
+
 /* Обратная связь */
 .contact-form {
   max-width: 500px;
   margin: 0 auto;
+  padding: 20px;
   text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 .back-to-top {
   position: fixed;
   bottom: 20px;
@@ -144,12 +147,13 @@ header nav a:active:before {
   cursor: pointer;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .back-to-top.show {
   opacity: 1;
 }
- 
+
 /* Блок обратной связи */
 .social-links {
   display: flex;
@@ -161,6 +165,7 @@ header nav a:active:before {
 .social-links a {
   display: flex;
   align-items: center;
+  justify-content: center;
   color: #0077b6;
   text-decoration: none;
   margin: 10px 0;
@@ -182,7 +187,7 @@ header nav a:active:before {
 }
 
 .email-link span {
-  word-break: break-all; /* Разрыв длинного email-адреса */
+  word-break: break-all;
 }
 
 @media (min-width: 768px) {
@@ -195,10 +200,11 @@ header nav a:active:before {
     margin: 0 20px;
   }
 }
+
 footer {
   background-color: #333;
   color: #fff;
-  padding: 20px 0;
+  padding: 30px 0;
   text-align: center;
 }
 
