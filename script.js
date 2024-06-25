@@ -35,36 +35,3 @@ backToTopButtons.forEach((button) => {
   });
 });
 
-function createLightning() {
-    const lightning = document.createElement('div');
-    lightning.classList.add('lightning');
-    
-    const header = document.getElementById('site-header');
-    header.appendChild(lightning);
-    
-    // Случайное положение и длительность
-    lightning.style.left = `${Math.random() * 100}%`;
-    lightning.style.height = `${50 + Math.random() * 100}px`;
-    
-    // Показать молнию
-    setTimeout(() => {
-        lightning.style.opacity = 1;
-    }, 10);
-    
-    // Скрыть молнию
-    setTimeout(() => {
-        lightning.style.opacity = 0;
-    }, 200);
-    
-    // Удалить молнию
-    setTimeout(() => {
-        lightning.remove();
-    }, 400);
-}
-
-function startLightning() {
-    setInterval(createLightning, Math.random() * 2000 + 1000);
-}
-
-document.addEventListener('DOMContentLoaded', startLightning);
-
