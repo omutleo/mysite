@@ -55,12 +55,11 @@ body {
 header {
   background-color: #0077b6;
   color: #fff;
-  padding: 20px;
   text-align: center;
-  height: 100vh; /* Высота на весь экран */
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 40px 20px; /* Уменьшили padding */
 }
 
 header h1 {
@@ -112,7 +111,7 @@ header nav a:active:before {
   margin-bottom: 20px;
   opacity: 0;
   animation: fade-in 2s ease-in-out forwards;
-  height: 100vh; /* Высота на весь экран */
+  min-height: 100vh; /* Минимальная высота вместо фиксированной */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -142,6 +141,7 @@ header nav a:active:before {
   margin: 0 auto;
   max-width: 100%;
   height: auto;
+  max-height: 300px; /* Ограничение высоты */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -166,8 +166,9 @@ header nav a:active:before {
 #services img {
   display: block;
   margin: 0 auto;
-  max-width: 80%;
+  max-width: 100%;
   height: auto;
+  max-height: 300px; /* Ограничение высоты */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -277,3 +278,4 @@ footer {
 .footer-content p {
   margin: 0;
 }
+
