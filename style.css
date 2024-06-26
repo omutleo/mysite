@@ -27,7 +27,14 @@ body, html {
 
 #content {
   display: none;
+  padding: 20px;
 }
+
+/* Дополнительные стили для основного контента */
+header, section, footer {
+  padding: 20px;
+}
+
 
 /* Дополнительные стили для основного контента */
 header, section, footer {
