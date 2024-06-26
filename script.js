@@ -24,9 +24,10 @@ document.addEventListener("DOMContentLoaded", function() {
       });
     });
   });
-
- $(document).ready(function() {
-  $('.back-to-top').click(function() {
-    $('html, body').animate({ scrollTop: 0 }, 800);
+ // Используем чистый JavaScript для кнопки "Вверх"
+  const backToTop = document.querySelector('.back-to-top');
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 });
+
