@@ -191,6 +191,7 @@ header nav a:active:before {
 }
 
 /* Стили для кнопки "Наверх" */
+/* Стили для кнопки "Наверх" */
 .back-to-top {
   display: none; /* Изначально скрыта */
   position: fixed;
@@ -213,7 +214,6 @@ header nav a:active:before {
 .back-to-top:hover {
   background-color: #555; /* Более светлый серый при наведении */
 }
-
 
 
 /* Блок обратной связи */
