@@ -192,20 +192,28 @@ header nav a:active:before {
 
 /* Стили для кнопки "Наверх" */
 .back-to-top {
+  display: none; /* Изначально скрыта */
   position: fixed;
   bottom: 20px;
   right: 20px;
-  z-index: 1;
-  background-color: #fff;
-  color: #333;
-  padding: 10px 20px;
+  z-index: 1000;
+  background-color: #333; /* Темно-серый цвет */
+  color: #fff; /* Белый текст */
+  border: none;
   border-radius: 5px;
+  padding: 10px 20px;
   cursor: pointer;
+  font-size: 16px;
+}
+
+.back-to-top.show {
+  display: block; /* Показать кнопку при прокрутке */
 }
 
 .back-to-top:hover {
-  background-color: #eee;
+  background-color: #555; /* Более светлый серый при наведении */
 }
+
 
 
 /* Блок обратной связи */
