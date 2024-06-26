@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const navLinks = document.querySelectorAll('.nav-link');
   const sections = document.querySelectorAll('.section');
 
-  navLinks.forEach((link, index) => {
+  navLinks.forEach((link) => {
     link.addEventListener('click', (event) => {
       event.preventDefault(); // Предотвращаем стандартное поведение ссылки
 
