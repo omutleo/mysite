@@ -76,7 +76,7 @@
       </div>
       <button class="back-to-top">Наверх</button>
     </section>
-    
+  
     <footer>
       <div class="footer-content">
         <p>&copy; Все права защищены - Прорвич Леонид Сергеевич</p>
@@ -85,6 +85,14 @@
   </div>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="script.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#video-container').on('click', function() {
+        $(this).fadeOut('slow', function() {
+          $('#content').fadeIn('slow');
+        });
+      });
+    });
+  </script>
 </body>
 </html>
