@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const navLinks = document.querySelectorAll('.nav-link');
   const sections = document.querySelectorAll('.section');
 
-  navLinks.forEach((link, index) => {
+  navLinks.forEach((link) => {
     link.addEventListener('click', (event) => {
       event.preventDefault(); // Предотвращаем стандартное поведение ссылки
 
@@ -30,20 +30,20 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
-  const backToTopButtons = document.querySelectorAll('.back-to-top');
+  const backToTopButton = document.querySelector('.back-to-top');
 
   window.addEventListener('scroll', () => {
-    backToTopButtons.forEach((button) => {
-      button.classList.add('show'); // Всегда показываем кнопку при скролле
-    });
+    if (window.pageYOffset > 100) {
+      backToTopButton.style.opacity = '1';
+    } else {
+      backToTopButton.style.opacity = '0';
+    }
   });
 
-  backToTopButtons.forEach((button) => {
-    button.addEventListener('click', () => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
+  backToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
     });
   });
 });
