@@ -34,11 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   window.addEventListener('scroll', () => {
     backToTopButtons.forEach((button) => {
-      if (window.pageYOffset > 100) {
-        button.classList.add('show');
-      } else {
-        button.classList.remove('show');
-      }
+      button.classList.add('show'); // Всегда показываем кнопку при скролле
     });
   });
 
