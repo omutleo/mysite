@@ -1,4 +1,3 @@
-// script.js
 document.addEventListener("DOMContentLoaded", function() {
   const videoContainer = document.getElementById('video-container');
   const content = document.getElementById('content');
@@ -7,6 +6,11 @@ document.addEventListener("DOMContentLoaded", function() {
     videoContainer.style.display = 'none';
     content.style.display = 'block';
     document.body.style.overflow = 'auto';
+
+    // Плавный скроллинг к основному контенту
+    content.scrollIntoView({
+      behavior: 'smooth'
+    });
   });
 
   const navLinks = document.querySelectorAll('.nav-link');
@@ -19,14 +23,13 @@ document.addEventListener("DOMContentLoaded", function() {
       const targetId = link.getAttribute('href'); // Получаем ID секции, к которой нужно перейти
       const targetSection = document.querySelector(targetId); // Находим секцию по ID
 
-      // Плавная прокрутка к секции
+      // Плавный скроллинг к выбранной секции
       targetSection.scrollIntoView({
         behavior: 'smooth' // Добавляем плавность
       });
     });
   });
-// script.js
-document.addEventListener("DOMContentLoaded", function() {
+
   const backToTopButtons = document.querySelectorAll('.back-to-top');
 
   window.addEventListener('scroll', () => {
@@ -48,5 +51,3 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 });
-
- 
