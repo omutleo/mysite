@@ -51,7 +51,7 @@ body {
 
 /* Шапка */
 header {
-  background-color: #0077b6;
+  background-color: #FFD700; /* Золотистый цвет фона шапки */
   color: #fff;
   text-align: center;
   display: flex;
@@ -69,10 +69,10 @@ header nav {
 }
 
 header nav a {
+  background-color: rgba(255, 215, 0, 0.6); /* Золотистый цвет с прозрачностью */
   color: #fff;
   text-decoration: none;
   margin: 0 10px;
-  background-color: rgba(255, 255, 255, 0.3);
   padding: 5px 10px;
   border-radius: 5px;
   position: relative;
@@ -94,8 +94,8 @@ header nav a:before {
 
 header nav a:hover,
 header nav a:active {
-  background-color: rgba(255, 255, 255, 0.4);
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 215, 0, 0.8); /* Темнее при наведении */
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
 }
 
 header nav a:hover:before,
@@ -202,10 +202,7 @@ header nav a:active:before {
 }
 
 .social-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #0077b6;
+  background-color: #FFD700; /* Золотистый цвет фона кнопок в блоке обратной связи */
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -217,8 +214,9 @@ header nav a:active:before {
 }
 
 .social-btn:hover {
-  background-color: #005a8c;
+  background-color: #FFC800; /* Нюансы цвета при наведении */
 }
+
 
 .social-btn i {
   font-size: 24px;
