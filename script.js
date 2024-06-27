@@ -1,18 +1,17 @@
+// script.js
 document.addEventListener("DOMContentLoaded", function() {
   const videoContainer = document.getElementById('video-container');
   const content = document.getElementById('content');
-  const backToTopButton = document.querySelector('.back-to-top');
-  const navLinks = document.querySelectorAll('.nav-link');
-  const sections = document.querySelectorAll('.section');
 
-  // Обработчик клика по видео
   videoContainer.addEventListener('click', function() {
     videoContainer.style.display = 'none';
     content.style.display = 'block';
     document.body.style.overflow = 'auto';
   });
 
-  // Обработчики клика по навигационным ссылкам
+  const navLinks = document.querySelectorAll('.nav-link');
+  const sections = document.querySelectorAll('.section');
+
   navLinks.forEach((link, index) => {
     link.addEventListener('click', (event) => {
       event.preventDefault(); // Предотвращаем стандартное поведение ссылки
@@ -27,20 +26,24 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
-  // Показать/скрыть кнопку "Наверх" при прокрутке
+  const backToTopButtons = document.querySelectorAll('.back-to-top');
+
   window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 100) {
-      backToTopButton.classList.add('show');
-    } else {
-      backToTopButton.classList.remove('show');
-    }
+    backToTopButtons.forEach((button) => {
+      if (window.pageYOffset > 100) {
+        button.classList.add('show');
+      } else {
+        button.classList.remove('show');
+      }
+    });
   });
 
-  // Плавная прокрутка наверх при клике на кнопку "Наверх"
-  backToTopButton.addEventListener('click', () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
+  backToTopButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     });
   });
 });
