@@ -205,12 +205,12 @@ header nav a:active:before {
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
 }
 
 .back-to-top.show {
   opacity: 1;
-  display: block;
-
+  
 }
 
 /* Блок обратной связи */
