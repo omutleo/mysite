@@ -19,14 +19,6 @@ document.addEventListener("DOMContentLoaded", function() {
     backToTopButton.style.visibility = 'visible'; // Делаем кнопку видимой
   }
 
-  // Обработчик клика по кнопке "наверх"
-  backToTopButton.addEventListener('click', () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth' // Плавная прокрутка к верху страницы
-    });
-  });
-
   // Обработчики кликов по навигационным ссылкам
   navLinks.forEach((link) => {
     link.addEventListener('click', (event) => {
