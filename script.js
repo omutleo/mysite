@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const videoContainer = document.getElementById('video-container');
   const content = document.getElementById('content');
   const backToTopButton = document.querySelector('.back-to-top');
+  const navLinks = document.querySelectorAll('.nav-link');
 
   videoContainer.addEventListener('click', function() {
     videoContainer.style.display = 'none';
@@ -21,6 +22,21 @@ document.addEventListener("DOMContentLoaded", function() {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
+    });
+  });
+
+  // Плавная прокрутка к секциям при клике на навигационные ссылки
+  navLinks.forEach((link) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault(); // Предотвращаем стандартное поведение ссылки
+
+      const targetId = link.getAttribute('href'); // Получаем ID секции, к которой нужно перейти
+      const targetSection = document.querySelector(targetId); // Находим секцию по ID
+
+      // Плавная прокрутка к секции
+      targetSection.scrollIntoView({
+        behavior: 'smooth' // Добавляем плавность
+      });
     });
   });
 
