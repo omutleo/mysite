@@ -195,8 +195,7 @@ header nav a:active:before {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: red; /* Временный цвет для теста */
-  border: 1px solid blue; /* Временная рамка для теста */
+  background-color: black;
   color: #fff;
   border: none;
   border-radius: 50%;
@@ -206,7 +205,7 @@ header nav a:active:before {
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  z-index: 1000; /* Высокий z-index, чтобы кнопка была поверх всего остального */
+  z-index: 1000; /* Назначаем высокий z-index для кнопки */
 }
 
 .back-to-top.show {
