@@ -195,7 +195,8 @@ header nav a:active:before {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: black;
+  background-color: red; /* Временный цвет для теста */
+  border: 1px solid blue; /* Временная рамка для теста */
   color: #fff;
   border: none;
   border-radius: 50%;
