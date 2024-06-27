@@ -28,16 +28,24 @@
 });
 */
 document.addEventListener("DOMContentLoaded", function() {
+  console.log("DOM fully loaded and parsed");
+
   const videoContainer = document.getElementById('video-container');
   const content = document.getElementById('content');
   const navLinks = document.querySelectorAll('.nav-link');
   const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 
+  if (scrollToTopBtn) {
+    console.log("Scroll to top button found");
+  } else {
+    console.log("Scroll to top button not found");
+  }
+
   // Обработчик клика по видео контейнеру
   videoContainer.addEventListener('click', function() {
-    videoContainer.style.display = 'none'; // Скрытие видео контейнера
-    content.style.display = 'block'; // Отображение основного контента
-    document.body.style.overflow = 'auto'; // Включение прокрутки страницы
+    videoContainer.style.display = 'none';
+    content.style.display = 'block';
+    document.body.style.overflow = 'auto';
   });
 
   // Обработчики кликов по навигационным ссылкам и прокрутка к секциям
