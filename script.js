@@ -31,7 +31,6 @@ document.addEventListener("DOMContentLoaded", function() {
   const videoContainer = document.getElementById('video-container');
   const content = document.getElementById('content');
   const navLinks = document.querySelectorAll('.nav-link');
-  const sections = document.querySelectorAll('.section');
   const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 
   // Обработчик клика по видео контейнеру
@@ -41,22 +40,18 @@ document.addEventListener("DOMContentLoaded", function() {
     document.body.style.overflow = 'auto'; // Включение прокрутки страницы
   });
 
-  // Обработчики кликов по навигационным ссылкам
+  // Обработчики кликов по навигационным ссылкам и прокрутка к секциям
   navLinks.forEach((link) => {
     link.addEventListener('click', (event) => {
-      event.preventDefault(); // Предотвращаем стандартное поведение ссылки
-
-      const targetId = link.getAttribute('href'); // Получаем ID секции, к которой нужно перейти
-      const targetSection = document.querySelector(targetId); // Находим секцию по ID
-
-      // Плавная прокрутка к секции
-      targetSection.scrollIntoView({
-        behavior: 'smooth' // Плавная прокрутка к секции
+      event.preventDefault();
+      const targetId = link.getAttribute('href');
+      document.querySelector(targetId).scrollIntoView({
+        behavior: 'smooth'
       });
     });
   });
 
-  // Обработчик прокрутки для показа/скрытия кнопки "Наверх"
+  // Показ и скрытие кнопки "Наверх"
   window.addEventListener('scroll', function() {
     if (window.scrollY > 300) {
       scrollToTopBtn.style.display = 'block';
