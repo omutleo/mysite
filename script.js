@@ -4,28 +4,29 @@ document.addEventListener("DOMContentLoaded", function() {
   const backToTopButton = document.querySelector('.back-to-top');
   const navLinks = document.querySelectorAll('.nav-link');
 
+  // Обработчик клика по видео контейнеру
   videoContainer.addEventListener('click', function() {
-    videoContainer.style.display = 'none';
-    content.style.display = 'block';
-    document.body.style.overflow = 'auto'; // Возвращаем возможность прокрутки страницы
-    showBackToTopButton(); // Показываем кнопку "наверх"
+    videoContainer.style.display = 'none'; // Скрытие видео контейнера
+    content.style.display = 'block'; // Отображение основного контента
+    document.body.style.overflow = 'auto'; // Включение прокрутки страницы
+    showBackToTopButton(); // Показать кнопку "наверх"
   });
 
   // Функция для показа кнопки "наверх"
   function showBackToTopButton() {
-    backToTopButton.style.opacity = '1';
-    backToTopButton.style.visibility = 'visible';
+    backToTopButton.style.opacity = '1'; // Делаем кнопку видимой
+    backToTopButton.style.visibility = 'visible'; // Делаем кнопку видимой
   }
 
-  // Плавная прокрутка к верху страницы при клике на кнопку "наверх"
+  // Обработчик клика по кнопке "наверх"
   backToTopButton.addEventListener('click', () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: 'smooth' // Плавная прокрутка к верху страницы
     });
   });
 
-  // Плавная прокрутка к секциям при клике на навигационные ссылки
+  // Обработчики кликов по навигационным ссылкам
   navLinks.forEach((link) => {
     link.addEventListener('click', (event) => {
       event.preventDefault(); // Предотвращаем стандартное поведение ссылки
@@ -35,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
       // Плавная прокрутка к секции
       targetSection.scrollIntoView({
-        behavior: 'smooth' // Добавляем плавность
+        behavior: 'smooth' // Плавная прокрутка к секции
       });
     });
   });
@@ -43,10 +44,10 @@ document.addEventListener("DOMContentLoaded", function() {
   // Показываем кнопку "наверх", если пользователь уже прокрутил вниз на странице
   window.addEventListener('scroll', () => {
     if (window.pageYOffset > 100) {
-      showBackToTopButton();
+      showBackToTopButton(); // Показываем кнопку "наверх"
     } else {
-      backToTopButton.style.opacity = '0';
-      backToTopButton.style.visibility = 'hidden';
+      backToTopButton.style.opacity = '0'; // Скрываем кнопку "наверх"
+      backToTopButton.style.visibility = 'hidden'; // Скрываем кнопку "наверх"
     }
   });
 });
