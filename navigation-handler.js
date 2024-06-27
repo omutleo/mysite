@@ -16,6 +16,9 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
+ document.addEventListener("DOMContentLoaded", function() {
+  const backToTopButton = document.querySelector('.back-to-top');
+
   window.addEventListener('scroll', () => {
     if (window.pageYOffset > 100) {
       backToTopButton.classList.add('show');
@@ -31,3 +34,4 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 });
+
