@@ -239,6 +239,24 @@ header nav a:active:before {
   }
 }
 
+#scrollToTopBtn {
+    display: none; /* Скрываем кнопку по умолчанию */
+    position: fixed; /* Фиксированная позиция на экране */
+    bottom: 20px; /* Отступ от нижнего края */
+    right: 20px; /* Отступ от правого края */
+    z-index: 99; /* Порядок слоя (над другими элементами) */
+    padding: 10px 15px; /* Поля внутри кнопки */
+    background-color: #333; /* Цвет фона кнопки */
+    color: #fff; /* Цвет текста */
+    border: none; /* Убираем границу */
+    border-radius: 4px; /* Закругляем углы */
+    cursor: pointer; /* Изменяем курсор при наведении */
+}
+
+#scrollToTopBtn:hover {
+    background-color: #555; /* Изменяем цвет фона при наведении */
+}
+
 footer {
   background-color: #333;
   color: #fff;
