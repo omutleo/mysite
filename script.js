@@ -52,16 +52,11 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 
-  // Плавная прокрутка к секциям при загрузке страницы
-  sections.forEach(section => {
-    section.addEventListener('click', () => {
-      const targetId = section.getAttribute('id');
-      const targetSection = document.querySelector(`#${targetId}`);
-      targetSection.scrollIntoView({
-        behavior: 'smooth'
-      });
+  // Плавная прокрутка к началу страницы при клике на кнопку "наверх"
+  backToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // Плавная прокрутка к верху страницы
     });
   });
-
 });
-
