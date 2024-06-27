@@ -1,5 +1,3 @@
-// video.js
-
 document.addEventListener("DOMContentLoaded", function() {
   const videoContainer = document.getElementById('video-container');
   const content = document.getElementById('content');
@@ -10,3 +8,4 @@ document.addEventListener("DOMContentLoaded", function() {
     document.body.style.overflow = 'auto';
   });
 });
+
