@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const content = document.getElementById('content');
   const backToTopButton = document.querySelector('.back-to-top');
   const navLinks = document.querySelectorAll('.nav-link');
+  const sections = document.querySelectorAll('.section');
 
   // Обработчик клика по видео контейнеру
   videoContainer.addEventListener('click', function() {
@@ -50,4 +51,17 @@ document.addEventListener("DOMContentLoaded", function() {
       backToTopButton.style.visibility = 'hidden'; // Скрываем кнопку "наверх"
     }
   });
+
+  // Плавная прокрутка к секциям при загрузке страницы
+  sections.forEach(section => {
+    section.addEventListener('click', () => {
+      const targetId = section.getAttribute('id');
+      const targetSection = document.querySelector(`#${targetId}`);
+      targetSection.scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+
 });
+
