@@ -14,7 +14,7 @@ body, html {
 }
 
 #scroll-to-top {
-  display: none; /* Изначально скрыта */
+  display: none; /* Initially hidden */
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -25,6 +25,11 @@ body, html {
   border-radius: 5px;
   cursor: pointer;
 }
+
+#scroll-to-top.show {
+  display: block; /* Show the button when scrolled down */
+}
+
 
 /* Дополнительные стили для основного контента */
 header, section, footer {
