@@ -18,20 +18,19 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   // Показываем кнопку "Наверх" при прокрутке
-  window.addEventListener('scroll', function() {
-    if (window.scrollY > 300) {
-      scrollToTopBtn.style.display = 'block';
-    } else {
-      scrollToTopBtn.style.display = 'none';
-    }
-  });
+window.addEventListener('scroll', function() {
+  if (window.scrollY > 300) {
+    scrollToTopBtn.classList.add('show');
+  } else {
+    scrollToTopBtn.classList.remove('show');
+  }
+});
 
-  // Обработчик клика по кнопке "Наверх"
-  scrollToTopBtn.addEventListener('click', function() {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth' // Плавная прокрутка наверх
-    });
+// Обработчик клика по кнопке "Наверх"
+scrollToTopBtn.addEventListener('click', function() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth' // Плавная прокрутка наверх
   });
 });
 
