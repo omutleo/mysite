@@ -30,7 +30,6 @@ body, html {
   display: block; /* Show the button when scrolled down */
 }
 
-
 /* Дополнительные стили для основного контента */
 header, section, footer {
   padding: 20px;
@@ -240,5 +239,3 @@ footer {
 .footer-content p {
   margin: 0;
 }
-
-
