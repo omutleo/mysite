@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рога и Копыта</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Рога и Копыта - монтажные работы под ключ</h1>
+        <div class="nav-buttons">
+            <button onclick="scrollToSection('about')">О нас</button>
+            <button onclick="scrollToSection('services')">Услуги</button>
+            <button onclick="scrollToSection('contacts')">Контакты</button>
+        </div>
+    </header>
+    <div class="scroll-button" onclick="scrollToTop()">Наверх</div>
+    <main>
+        <section id="about" class="section">
+            <img src="pic.jpg" alt="О нас">
+            <h2>О нас</h2>
+            <p>Рога и Копыта это команда профессиональных монтажников с необходимым оборудованием и большим опытом работы в сфере монтажа и обслуживания инженерных систем.</p>
+        </section>
+        <section id="services" class="section">
+            <img src="pic2.jpg" alt="Услуги">
+            <h2>Услуги</h2>
+            <p>Наша компания предоставляет монтажные работы слаботочных систем, систем видеонаблюдения, систем кондиционирования, пожарной сигнализации и других инженерных сетей.</p>
+        </section>
+        <section id="contacts" class="section">
+            <h2>Контакты</h2>
+            <button onclick="window.location.href='https://t.me/omutLeo'">Мы в телеграмме</button>
+            <p>Почта: <a href="mailto:prorokkant@yandex.ru">prorokkant@yandex.ru</a></p>
+            <p>Телефон: 89967989688</p>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>© Рога и Копыта - все права защищены.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
