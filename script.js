@@ -12,10 +12,19 @@ function scrollToTop() {
 
 window.onscroll = function() {
     const scrollButton = document.querySelector('.scroll-button');
-    scrollButton.style.bottom = window.scrollY + window.innerHeight > document.body.offsetHeight - 50 ? '50px' : '20px';
+    const footer = document.querySelector('.footer');
+    const footerRect = footer.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
     if (window.scrollY > window.innerHeight) {
         scrollButton.classList.add('visible');
     } else {
         scrollButton.classList.remove('visible');
+    }
+
+    if (footerRect.top < windowHeight) {
+        scrollButton.style.bottom = `${windowHeight - footerRect.top + 20}px`;
+    } else {
+        scrollButton.style.bottom = '20px';
     }
 };
