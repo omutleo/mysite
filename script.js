@@ -8,9 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
       event.preventDefault();
       const targetId = link.getAttribute('href');
       const targetSection = document.querySelector(targetId);
-      if (targetSection) {
-        targetSection.scrollIntoView({ behavior: 'smooth' });
-      }
+      targetSection.scrollIntoView({ behavior: 'smooth' });
     });
   });
 
@@ -29,4 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
   scrollToTopBtn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
+
+  // Вызываем handleScroll сразу после загрузки страницы, чтобы проверить, нужно ли показывать кнопку "Наверх"
+  handleScroll();
 });
