@@ -60,7 +60,7 @@ body, html {
 }
 
 .section {
-    padding: 100px 50px 50px; /* Увеличили верхний padding для учета фиксированной шапки */
+    padding: 150px 50px 50px; /* Увеличили верхний padding для учета фиксированной шапки */
     text-align: center;
 }
 
@@ -85,13 +85,18 @@ body, html {
     color: #fff;
     padding: 10px;
     cursor: pointer;
-    display: block;
+    display: none;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
 
 .scroll-button:hover {
     background-color: #444;
+}
+
+/* Кнопка наверх */
+.scroll-button.visible {
+    display: block;
 }
 
 /* Стили для кнопок */
@@ -138,7 +143,7 @@ button.telegram-button:hover {
     }
 
     .section {
-        padding: 80px 20px 20px; /* Уменьшили верхний padding для учета фиксированной шапки */
+        padding: 130px 20px 20px; /* Уменьшили верхний padding для учета фиксированной шапки */
     }
     
     .footer {
@@ -158,7 +163,7 @@ button.telegram-button:hover {
     }
 
     .section {
-        padding: 70px 10px 10px; /* Уменьшили верхний padding для учета фиксированной шапки */
+        padding: 120px 10px 10px; /* Уменьшили верхний padding для учета фиксированной шапки */
     }
 
     .footer {
