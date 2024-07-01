@@ -5,38 +5,26 @@ document.addEventListener("DOMContentLoaded", function() {
   // Обработчики кликов по навигационным ссылкам
   navLinks.forEach((link) => {
     link.addEventListener('click', (event) => {
-      event.preventDefault(); // Предотвращаем стандартное поведение ссылки
-
-      const targetId = link.getAttribute('href'); // Получаем ID секции, к которой нужно перейти
-      const targetSection = document.querySelector(targetId); // Находим секцию по ID
-
-      // Плавная прокрутка к секции
-      targetSection.scrollIntoView({
-        behavior: 'smooth' // Плавная прокрутка к секции
-      });
+      event.preventDefault();
+      const targetId = link.getAttribute('href');
+      const targetSection = document.querySelector(targetId);
+      targetSection.scrollIntoView({ behavior: 'smooth' });
     });
   });
 
   // Показываем кнопку "Наверх" при прокрутке
-window.addEventListener('scroll', function() {
-  if (window.scrollY > 300) {
-    scrollToTopBtn.classList.add('show');
-  } else {
-    scrollToTopBtn.classList.remove('show');
-  }
-});
+  const handleScroll = () => {
+    if (window.scrollY > 300) {
+      scrollToTopBtn.classList.add('show');
+    } else {
+      scrollToTopBtn.classList.remove('show');
+    }
+  };
 
-// Обработчик клика по кнопке "Наверх"
-scrollToTopBtn.addEventListener('click', function() {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth' // Плавная прокрутка наверх
+  window.addEventListener('scroll', handleScroll);
+
+  // Обработчик клика по кнопке "Наверх"
+  scrollToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
-});
-window.addEventListener('scroll', function() {
-  if (window.scrollY > 300) {
-    scrollToTopBtn.classList.add('show');
-  } else {
-    scrollToTopBtn.classList.remove('show');
-  }
 });
