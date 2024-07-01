@@ -1,15 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
-  const videoContainer = document.getElementById('video-container');
-  const content = document.getElementById('content');
   const navLinks = document.querySelectorAll('.nav-link');
   const sections = document.querySelectorAll('.section');
-
-  // Обработчик клика по видео контейнеру
-  videoContainer.addEventListener('click', function() {
-    videoContainer.style.display = 'none'; // Скрытие видео контейнера
-    content.style.display = 'block'; // Отображение основного контента
-    document.body.style.overflow = 'auto'; // Включение прокрутки страницы
-  });
+  const scrollToTopBtn = document.getElementById('scroll-to-top');
 
   // Обработчики кликов по навигационным ссылкам
   navLinks.forEach((link) => {
@@ -23,6 +15,23 @@ document.addEventListener("DOMContentLoaded", function() {
       targetSection.scrollIntoView({
         behavior: 'smooth' // Плавная прокрутка к секции
       });
+    });
+  });
+
+  // Показываем кнопку "Наверх" при прокрутке
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 300) {
+      scrollToTopBtn.style.display = 'block';
+    } else {
+      scrollToTopBtn.style.display = 'none';
+    }
+  });
+
+  // Обработчик клика по кнопке "Наверх"
+  scrollToTopBtn.addEventListener('click', function() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // Плавная прокрутка наверх
     });
   });
 });
