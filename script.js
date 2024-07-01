@@ -33,4 +33,10 @@ scrollToTopBtn.addEventListener('click', function() {
     behavior: 'smooth' // Плавная прокрутка наверх
   });
 });
-
+window.addEventListener('scroll', function() {
+  if (window.scrollY > 300) {
+    scrollToTopBtn.classList.add('show');
+  } else {
+    scrollToTopBtn.classList.remove('show');
+  }
+});
