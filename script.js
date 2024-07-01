@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
   const navLinks = document.querySelectorAll('.nav-link');
-  const sections = document.querySelectorAll('.section');
   const scrollToTopBtn = document.getElementById('scroll-to-top');
 
   // Обработчики кликов по навигационным ссылкам
@@ -35,3 +34,4 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 });
+
