@@ -3,6 +3,7 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    box-sizing: border-box;
 }
 
 /* Первая страница */
@@ -25,7 +26,7 @@ body, html {
     background-color: gold;
     text-align: center;
     padding: 20px;
-    /*position: fixed;*/
+    position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
@@ -37,6 +38,9 @@ body, html {
     font-size: 2em;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .nav-buttons {
@@ -60,20 +64,20 @@ body, html {
 }
 
 .section {
-    padding: 150px 50px 50px; /* Увеличили верхний padding для учета фиксированной шапки */
+    padding: 150px 50px 50px;
     text-align: center;
 }
 
 .section img {
     max-width: 100%;
     height: auto;
-    margin: 0 auto; /* Центрирование изображения */
     display: block;
+    margin: 0 auto 20px;
 }
 
-.section p {
-    max-width: 800px; /* Ограничение ширины текста */
-    margin: 20px auto; /* Центрирование текста */
+.section-content {
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .footer {
@@ -139,11 +143,14 @@ button.telegram-button:hover {
 
 /* Адаптивные стили */
 @media (max-width: 768px) {
+    .header {
+        padding: 10px;
+    }
+
     .header h1 {
         font-size: 1.5em;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        white-space: normal;
+        padding: 0 10px;
     }
 
     .nav-buttons button {
@@ -153,19 +160,23 @@ button.telegram-button:hover {
     }
 
     .section {
-        padding: 130px 20px 20px; /* Уменьшили верхний padding для учета фиксированной шапки */
+        padding: 130px 20px 20px;
     }
-    
+
     .footer {
         padding: 10px;
     }
 }
 
 @media (max-width: 480px) {
+    .header {
+        padding: 10px 5px;
+    }
+
     .header h1 {
         font-size: 1.2em;
         white-space: normal;
-        word-wrap: break-word;
+        padding: 0 5px;
     }
 
     .nav-buttons button {
@@ -175,7 +186,7 @@ button.telegram-button:hover {
     }
 
     .section {
-        padding: 120px 10px 10px; /* Уменьшили верхний padding для учета фиксированной шапки */
+        padding: 120px 10px 10px;
     }
 
     .footer {
