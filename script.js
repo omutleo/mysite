@@ -5,4 +5,3 @@ function redirectToHome() {
 function scrollToSection(sectionId) {
     document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
 }
-
