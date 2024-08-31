@@ -7,9 +7,49 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="video-container" onclick="redirectToHome()">
-        <video class="background-video" src="logo.mp4" autoplay loop muted></video>
-    </div>
+    <header class="header">
+        <h1>Рога и Копыта - монтажные работы под ключ</h1>
+        <div class="nav-buttons">
+            <button onclick="scrollToSection('about')">О нас</button>
+            <button onclick="scrollToSection('services')">Услуги</button>
+            <button onclick="scrollToSection('contacts')">Контакты</button>
+        </div>
+    </header>
+    <main>
+        <section id="about" class="section">
+            <h2>О нас</h2>
+            <img src="pic.jpg" alt="О нас">
+            <p>Рога и Копыта это команда профессиональных монтажников с необходимым оборудованием и большим опытом работы в сфере монтажа и обслуживания инженерных систем.</p>
+        </section>
+        <section id="services" class="section">
+            <h2>Услуги</h2>
+            <img src="pic2.jpeg" alt="Услуги">
+            <p>Наша компания предоставляет следующий комплекс услуг: </p> 
+            <p>Высверливание отверстия для подрозетников: 350 рублей за одну лунку.</p>
+            <p>Штробление стен: 500 рублей за метр погонный.</p> 
+            <p>Вклейка подрозетников: 200 рублей за штуку.</p>
+            <p>Завод кабеля в подрозетник: 70 рублей за один конец.</p>
+            <p>Монтаж кабеля в гофре: 170 рублей за погонный метр.</p>
+            <p>Монтаж кабеля без гофры: 120 рублей за погонный метр.</p>
+            <p>Проходные отверстия: от 500 до 1000 рублей за единицу, в зависимости от сложности.</p>
+            <p>Монтаж и расключение распределительных коробок: 1000 рублей за штуку.</p>
+            <p>Сборка электрического щита: от 20000 до 80 000 рублей, в зависимости от сложности.</p>
+            <p>Сборка слаботочного щита: от 15000 до 70 000 рублей, в зависимости от насыщения.</p>
+            <p>Индивидуальные щиты ручной работы: оговариваются отдельно.</p>
+            <p>Установка розеток и выключателей: 350 рублей за единицу.</p>
+            <p>Уборка объекта после электромонтажных работ: 100 рублей за квадратный метр.</p>
+            <p>Случайный удар током на объекте: оговаривается отдельно. </p>
+        </section>
+        <section id="contacts" class="section">
+            <h2>Контакты</h2>
+            <button class="telegram-button" onclick="window.location.href='https://t.me/omutLeo'">Мы в телеграмме</button>
+            <p class="contact-info">Почта:<a href="mailto:">S.bogatenkov@hyptec.ru</a></p>
+            <p class="contact-info">Телефон: 89967989688</p>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>© Рога и Копыта - все права защищены.</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
