@@ -4,12 +4,12 @@ body, html {
     padding: 0;
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
-    background-color: #f9f9f9;
+    background-color: #f0f8ff; /* Светло-голубой фон */
     color: #333;
 }
 
 .header {
-    background-color: #333;
+    background-color: #0088cc; /* Ярко-синий фон */
     color: white;
     text-align: center;
     padding: 20px;
@@ -31,7 +31,7 @@ body, html {
 }
 
 .nav-buttons button {
-    background-color: #0088cc;
+    background-color: #ffa500; /* Оранжевый фон */
     border: none;
     padding: 10px 25px;
     margin: 5px;
@@ -43,7 +43,7 @@ body, html {
 }
 
 .nav-buttons button:hover {
-    background-color: #005f99;
+    background-color: #ff4500; /* Ярко-красный при наведении */
     transform: scale(1.05);
 }
 
@@ -56,7 +56,7 @@ body, html {
 }
 
 .section img {
-    max-width: 100%;
+    max-width: 300px; /* Ограничение размера изображений */
     height: auto;
     margin-bottom: 20px;
 }
@@ -74,20 +74,37 @@ body, html {
 }
 
 .services-list li {
-    background-color: #f0f0f0;
+    background-color: #ffebcd; /* Бежевый фон для элементов списка */
     padding: 10px;
     margin: 5px 0;
     border-radius: 5px;
 }
 
+.telegram-button {
+    font-size: 1.5em; /* Увеличенный размер текста */
+    padding: 15px 30px; /* Увеличенные отступы */
+    background-color: #0088cc; /* Синий фон */
+    color: white;
+    border-radius: 10px; /* Закругленные углы */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.telegram-button:hover {
+    background-color: #005f99; /* Темно-синий при наведении */
+    transform: scale(1.1);
+}
+
 .contact-info {
     margin: 20px 0;
+    font-size: 1.2em; /* Увеличенный размер текста */
 }
 
 .contact-form {
-    background-color: #f0f0f0;
+    background-color: #ffebcd; /* Бежевый фон для формы */
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 10px;
     max-width: 500px;
     margin: 0 auto;
     text-align: left;
@@ -97,6 +114,7 @@ body, html {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
+    color: #0088cc; /* Синий цвет текста */
 }
 
 .contact-form input, 
@@ -104,12 +122,12 @@ body, html {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
+    border: 2px solid #0088cc; /* Синие границы */
     border-radius: 5px;
 }
 
 .contact-form button {
-    background-color: #0088cc;
+    background-color: #ffa500; /* Оранжевый фон кнопки */
     color: white;
     border: none;
     padding: 10px 20px;
@@ -119,12 +137,12 @@ body, html {
 }
 
 .contact-form button:hover {
-    background-color: #005f99;
+    background-color: #ff4500; /* Ярко-красный при наведении */
     transform: scale(1.05);
 }
 
 .footer {
-    background-color: #333;
+    background-color: #0088cc; /* Синий фон */
     color: white;
     text-align: center;
     padding: 20px;
@@ -161,7 +179,7 @@ body, html {
     }
 
     .section {
-        padding: 120px 10px 10px;
+        padding: 150px 10px 10px; /* Увеличен отступ сверху, чтобы меню не перекрывало раздел */
     }
 }
 
