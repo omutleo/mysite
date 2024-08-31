@@ -2,173 +2,166 @@
 body, html {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
-/* Первая страница */
-.video-container {
-    position: relative;
-    width: calc(100vw - 40px); /* Уменьшаем ширину на 40px (20px отступы слева и справа) */
-    height: calc(100vh - 40px); /* Уменьшаем высоту на 40px (20px отступы сверху и снизу) */
-    margin: 20px; /* Отступы вокруг видео */
-    overflow: hidden;
-    cursor: pointer;
-}
-
-.background-video {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-/* Основная страница */
 .header {
-    background-color: gold;
+    background-color: #333;
+    color: white;
     text-align: center;
     padding: 20px;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .header h1 {
     margin: 0;
-    font-size: 2em;
+    font-size: 2.5em;
     font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .nav-buttons {
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .nav-buttons button {
-    background-color: #fff;
+    background-color: #0088cc;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 25px;
     margin: 5px;
     cursor: pointer;
     font-size: 1em;
     border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
+    color: white;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
 
 .nav-buttons button:hover {
-    background-color: #000;
-    color: #fff;
+    background-color: #005f99;
+    transform: scale(1.05);
 }
 
 .section {
-    padding: 150px 50px 50px;
+    padding: 160px 50px 50px;
     text-align: center;
+    background-color: white;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .section img {
     max-width: 100%;
     height: auto;
-    display: block;
-    margin: 0 auto 20px;
+    margin-bottom: 20px;
 }
 
 .section-content {
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
+    text-align: left;
+}
+
+.services-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.services-list li {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+.contact-info {
+    margin: 20px 0;
+}
+
+.contact-form {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background-color: #0088cc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #005f99;
+    transform: scale(1.05);
 }
 
 .footer {
     background-color: #333;
-    color: #fff;
+    color: white;
     text-align: center;
     padding: 20px;
-    position: relative;
-}
-
-/* Стили для кнопок */
-button {
-    font-size: 1em;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-button:hover {
-    background-color: #444;
-    color: #fff;
-}
-
-button.telegram-button {
-    background-color: #0088cc;
-    color: white;
-}
-
-button.telegram-button:hover {
-    background-color: #005f99;
-}
-
-.contact-info {
-    border: 2px solid #333;
-    padding: 10px;
-    display: inline-block;
-    margin: 10px 0;
 }
 
 /* Адаптивные стили */
 @media (max-width: 768px) {
-    .header {
-        padding: 10px;
-    }
-
     .header h1 {
-        font-size: 1.5em;
-        white-space: normal;
-        padding: 0 10px;
+        font-size: 2em;
     }
 
     .nav-buttons button {
-        padding: 8px 16px;
-        margin: 3px;
+        padding: 8px 20px;
         font-size: 0.9em;
     }
 
     .section {
-        padding: 130px 20px 20px;
+        padding: 140px 20px 20px;
     }
 
-    .footer {
-        padding: 10px;
+    .section-content {
+        padding: 0 20px;
     }
 }
 
 @media (max-width: 480px) {
-    .header {
-        padding: 10px 5px;
-    }
-
     .header h1 {
-        font-size: 1.2em;
-        white-space: normal;
-        padding: 0 5px;
+        font-size: 1.5em;
     }
 
     .nav-buttons button {
-        padding: 6px 12px;
-        margin: 2px;
+        padding: 6px 15px;
         font-size: 0.8em;
     }
 
     .section {
         padding: 120px 10px 10px;
     }
-
-    .footer {
-        padding: 5px;
-    }
 }
+
