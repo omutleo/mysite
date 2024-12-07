@@ -3,93 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Рога и Копыта - профессиональные монтажные работы под ключ. Высокое качество, опытные специалисты.">
-    <meta name="keywords" content="монтаж, услуги, электромонтаж, инженерные системы">
-    <meta http-equiv="cache-control" content="no-cache">
-    <meta http-equiv="expires" content="0">
-    <meta http-equiv="pragma" content="no-cache">
-    <title>Рога и Копыта - монтажные работы под ключ</title>
-    <link rel="stylesheet" href="style.css?v=1.0">
+    <title>Познай себя</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Остальная часть страницы остаётся неизменной -->
-    <header class="header">
-        <h1>Рога и Копыта - монтажные работы под ключ</h1>
-        <nav class="nav-buttons">
-            <button onclick="scrollToSection('about')">О нас</button>
-            <button onclick="scrollToSection('services')">Услуги</button>
-            <button onclick="scrollToSection('contacts')">Контакты</button>
-        </nav>
-    </header>
-    <main>
-        <section id="about" class="section">
-            <h2>О нас</h2>
-            <img src="pic.jpg" alt="О нас">
-            <div class="section-content">
-                <p>Рога и Копыта — команда профессионалов в области монтажа и обслуживания инженерных систем. Мы гарантируем высокое качество выполнения работ и соблюдение всех стандартов безопасности.</p>
-            </div>
-        </section>
-        <section id="services" class="section">
-            <h2>Услуги</h2>
-            <img src="pic2.jpeg" alt="Услуги">
-            <div class="section-content">
-                <ul class="services-list">
-                    <li>Высверливание отверстия для подрозетников: 350 рублей за лунку.</li>
-                    <li>Штробление стен: 500 рублей за метр.</li>
-                    <li>Вклейка подрозетников: 200 рублей за штуку.</li>
-                    <li>Завод кабеля в подрозетник: 70 рублей за один конец.</li>
-                    <li>Монтаж кабеля в гофре: 170 рублей за метр.</li>
-                    <li>Монтаж кабеля без гофры: 120 рублей за метр.</li>
-                    <li>Проходные отверстия: от 500 до 1000 рублей за единицу.</li>
-                    <li>Монтаж и расключение распределительных коробок: 1000 рублей за штуку.</li>
-                    <li>Сборка электрического щита: от 20000 до 80000 рублей.</li>
-                    <li>Сборка слаботочного щита: от 15000 до 70000 рублей.</li>
-                    <li>Индивидуальные щиты ручной работы: оговариваются отдельно.</li>
-                    <li>Установка розеток и выключателей: 350 рублей за единицу.</li>
-                    <li>Уборка объекта после электромонтажных работ: 100 рублей за квадратный метр.</li>
-                    <li>Случайный удар током на объекте: оговаривается отдельно.</li>
-                </ul>
-            </div>
-        </section>
-        <section id="contacts" class="section">
-            <h2>Контакты</h2>
-            <button class="telegram-button" onclick="window.location.href='https://t.me/omutLeo'">Мы в Телеграм</button>
-            <div class="contact-info">
-                <p>Почта: <a href="mailto:prorokkant@yandex.ru">prorokkant@yandex.ru</a></p>
-                <p>Телефон: <a href="tel:89967989688">89967989688</a></p>
-            </div>
-            <!-- Контактная форма -->
-<form
-  class="contact-form"
-  id="contact-form"
-  method="POST"
->
-  <label for="name">Ваше имя:</label>
-  <input type="text" id="name" name="name" required />
-
-  <label for="email">Ваша почта:</label>
-  <input type="email" id="email" name="email" required />
-
-  <label for="phone">Ваш телефон:</label>
-  <input type="tel" id="phone" name="phone" required />
-
-  <label for="message">Сообщение:</label>
-  <textarea id="message" name="message" rows="4" required></textarea>
-
-  <button type="submit">Отправить</button>
-</form>
-
-<!-- Блок для отображения сообщений -->
-<div id="form-status"></div>
-
-        </section>
-    </main>
-    <footer class="footer">
-        <p>© Рога и Копыта - все права защищены.</p>
+    <div class="container">
+        <h1 class="title">познай себя</h1>
+        <div class="buttons">
+            <a href="mind.html" class="button">мозг</a>
+            <a href="conscience.html" class="button">сознание</a>
+        </div>
+        <div class="quote">
+            <p>Если бы ты не мог проснуться, как бы ты узнал, что сон, а что действительность?</p>
+        </div>
+    </div>
+    <footer>
+        Леонид Прорвич - все права защищены
     </footer>
-    <script src="script.js?v=1.0"></script>
 </body>
 </html>
+
 
 
 
