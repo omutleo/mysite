@@ -45,6 +45,13 @@ body {
     transform: scale(1.1);
 }
 
+.buttons.vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Расстояние между кнопками */
+}
+
 .quote {
     margin: 50px 0;
     font-size: 1.5em;
